@@ -1,11 +1,11 @@
 #include<stdio.h>
 /**
- * Write a C program that prints exactly Programming is like building a multilingual puzzle, followed by a new line
- * Use the function puts
- * You are not allowed to use printf
- * Your program should end with the value
+ * main -  This is where our code will be done
+ *
+ * Return: this is where our return will be 0
  */
-int main(void){
+int main(void)
+{
 	puts("\"Programming is like building a multilingual puzzle");
-	return(0);
+	return (0);
 }
