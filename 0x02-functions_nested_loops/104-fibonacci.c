@@ -11,41 +11,44 @@
  */
 int main(void)
 {
-	int digit;
-	unsigned long num1, num2, num3;
-	unsigned long alpha1, alpha2, alpha3, add;
+	int c, boolean, boolean2;
+	long int n1, n2, fn, fn2, n11, n22;
 
-	digit = 0;
-	num1 = 0;
-	num2 = 1;
-	for (digit = 1; digit <= 91; digit++)
+	n1 = 1;
+	n2 = 2;
+	boolean =  boolean2 = 1;
+	printf("%ld, %ld", n1, n2);
+	for (c = 0; c < 96; c++)
 	{
-		num3 = num1 + num2;
-		num1 = num2;
-		num2 = num3;
-		printf("%lu, ", num3);
-	}
-	alpha1 = num1 % 1000;
-	num1 = num1 / 1000;
-	alpha2 = num2 % 1000;
-	num2 = num2 / 1000;
-	while (add <= 98)
-	{
-		add = (alpha1 + alpha2) / 1000;
-		alpha3 = (alpha1 + alpha2) - add * 1000;
-		num3 = (num1 + num2) + add;
-		alpha1 = alpha2;
-		alpha2 = alpha3;
-		num1 = num2;
-		num2 = num3;
-		if (alpha3 >= 100)
-			printf("%lu%lu", num3, alpha3);
+		if (boolean)
+		{
+			fn = n1 + n2;
+			printf(", %ld", fn);
+			n1 = n2;
+			n2 = fn;
+		}
 		else
-			printf("%lu0%lu", num3, alpha3);
-		if (digit != 98)
-			printf(", ");
-		digit++;
+		{
+			if (boolean2)
+			{
+				n11 = n1 % 1000000000;
+				n22 = n2 % 1000000000;
+				n1 = n1 / 1000000000;
+				n2 = n2 / 1000000000;
+				boolean2 = 0;
+			}
+			fn2 = (n11 + n22);
+			fn = n1 + n2 + (fn2 / 1000000000);
+			printf(", %ld", fn);
+			printf("%ld", fn2 % 1000000000);
+			n1 = n2;
+			n11 = n22;
+			n2 = fn;
+			n22 = (fn2 % 1000000000);
+		}
+		if (((n1 + n2) < 0) && boolean == 1)
+			boolean = 0;
 	}
-	putchar('\n');
+	printf("\n");
 	return (0);
 }
