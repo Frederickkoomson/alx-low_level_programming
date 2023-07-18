@@ -6,7 +6,7 @@
 #include "main.h"
 
 /**
- * main - This is where the program is going to be doing
+ * print_alphabet - This is the function we are going to use
  * Return: This section will 0 as output
  */
 
