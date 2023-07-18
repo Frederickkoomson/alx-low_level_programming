@@ -44,7 +44,7 @@ int main(void)
 			num1 = num2;
 			num3 = num4;
 			num2 = fibo;
-			nnum4 = (fibo2 % 1000000000);
+			num4 = (fibo2 % 1000000000);
 		}
 		if (((num1 + num2) < 0) && change == 1)
 			change = 0;
