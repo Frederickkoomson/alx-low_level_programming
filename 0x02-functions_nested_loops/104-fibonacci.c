@@ -11,43 +11,43 @@
  */
 int main(void)
 {
-	int c, boolean, boolean2;
-	long int n1, n2, fn, fn2, n11, n22;
+	int digit, change, change2;
+	long int num1, num2, fibo, fibo2, num3, num4;
 
-	n1 = 1;
-	n2 = 2;
-	boolean =  boolean2 = 1;
-	printf("%ld, %ld", n1, n2);
-	for (c = 0; c < 96; c++)
+	num1 = 1;
+	num2 = 2;
+	change =  change2 = 1;
+	printf("%ld, %ld", num1, num2);
+	for (digit = 0; digit < 96; digit++)
 	{
-		if (boolean)
+		if (change)
 		{
-			fn = n1 + n2;
-			printf(", %ld", fn);
-			n1 = n2;
-			n2 = fn;
+			fibo = num1 + num2;
+			printf(", %ld", fibo);
+			num1 = num2;
+			num2 = fibo;
 		}
 		else
 		{
-			if (boolean2)
+			if (change2)
 			{
-				n11 = n1 % 1000000000;
-				n22 = n2 % 1000000000;
-				n1 = n1 / 1000000000;
-				n2 = n2 / 1000000000;
-				boolean2 = 0;
+				num3 = num1 % 1000000000;
+				num4 = num2 % 1000000000;
+				num1 = num1 / 1000000000;
+				num2 = num2 / 1000000000;
+				change2 = 0;
 			}
-			fn2 = (n11 + n22);
-			fn = n1 + n2 + (fn2 / 1000000000);
-			printf(", %ld", fn);
-			printf("%ld", fn2 % 1000000000);
-			n1 = n2;
-			n11 = n22;
-			n2 = fn;
-			n22 = (fn2 % 1000000000);
+			fibo2 = (num3 + num4);
+			fibo = num1 + num2 + (fibo2 / 1000000000);
+			printf(", %ld", fibo);
+			printf("%ld", fibo2 % 1000000000);
+			num1 = num2;
+			num3 = num4;
+			num2 = fibo;
+			nnum4 = (fibo2 % 1000000000);
 		}
-		if (((n1 + n2) < 0) && boolean == 1)
-			boolean = 0;
+		if (((num1 + num2) < 0) && change == 1)
+			change = 0;
 	}
 	printf("\n");
 	return (0);
