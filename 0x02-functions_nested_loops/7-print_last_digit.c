@@ -7,14 +7,23 @@
 
 /**
  *print_last_digit - This is where the program is going to be doing
- * @last: we print the last digits of a number
+ * @num: we print the last digits of a number
  * Return: This section will always be 0 succes
  */
 
-int print_last_digit(int last)
+int print_last_digit(int num)
 {
+	int last;
+
+	if (num < 0)
+		num = -num;
+
+	last = num % 10;
+
 	if (last < 0)
-		last = last * -1;
-	_putchar((last % 10) + '0');
-	return (last % 10);
+		last = -last;
+
+	_putchar(last + '0');
+
+	return (last);
 }
