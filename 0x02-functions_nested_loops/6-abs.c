@@ -12,9 +12,7 @@
  */
 int _abs(int digits)
 {
-	if (digits >= 0)
-	{
-		return (digits);
-	}
+	if (digits < 0)
+		digits = digits * -1;
 	return (digits);
 }
