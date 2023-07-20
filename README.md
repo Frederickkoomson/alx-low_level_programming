@@ -12,7 +12,7 @@ working in the C language. The specific list of projects contained follows:
 * [0x03. C - More functions, more nested loops](./0x03-more_functions_nested_loops)
 * [0x04. C - Pointers, arrays and strings](./0x04-pointers_arrays_strings)
 
-## Author :Frederick:
+## Author :Frederick Bossman Koomson
 
 * __Frederick Koomson__ <[Frederickkoomson](https://github.com/Frederickkoomson)>
 
