@@ -7,6 +7,7 @@
 /**
  * _isupper - This is a function to check the upper case character
  * Return: 1 if the uppercase c else return 0.
+ * @c: This is to define the character
  */
 int _isupper(int c)
 {
