@@ -1,6 +1,6 @@
 /*
  * File: 101-keygen.c
- * Auth: Brennan D Baraban
+ * Auth: Frederick B. Koomson
  */
 
 #include <stdio.h>
@@ -15,45 +15,45 @@
  */
 int main(void)
 {
-	char password[84];
-	int index = 0, sum = 0, diff_half1, diff_half2;
+	char passwd[84];
+	int start = 0, add = 0, first_side1, second_side2;
 
 	srand(time(0));
 
-	while (sum < 2772)
+	while (add < 2772)
 	{
-		password[index] = 33 + rand() % 94;
-		sum += password[index++];
+		passwd[start] = 33 + rand() % 94;
+		add += passwd[start++];
 	}
 
-	password[index] = '\0';
+	passwd[start] = '\0';
 
-	if (sum != 2772)
+	if (add != 2772)
 	{
-		diff_half1 = (sum - 2772) / 2;
-		diff_half2 = (sum - 2772) / 2;
-		if ((sum - 2772) % 2 != 0)
-			diff_half1++;
+		first_side1 = (add - 2772) / 2;
+		second_side2 = (add - 2772) / 2;
+		if ((add - 2772) % 2 != 0)
+			first_side1++;
 
-		for (index = 0; password[index]; index++)
+		for (start = 0; passwd[start]; start++)
 		{
-			if (password[index] >= (33 + diff_half1))
+			if (passwd[start] >= (33 + first_side1))
 			{
-				password[index] -= diff_half1;
+				passwd[start] -= first_side1;
 				break;
 			}
 		}
-		for (index = 0; password[index]; index++)
+		for (start = 0; passwd[start]; start++)
 		{
-			if (password[index] >= (33 + diff_half2))
+			if (passwd[start] >= (33 + second_side2))
 			{
-				password[index] -= diff_half2;
+				passwd[start] -= second_side2;
 				break;
 			}
 		}
 	}
 
-	printf("%s", password);
+	printf("%s", passwd);
 
 	return (0);
 }
