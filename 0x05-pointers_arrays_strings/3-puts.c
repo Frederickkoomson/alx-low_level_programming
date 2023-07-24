@@ -6,7 +6,7 @@
 #include "main.h"
 
 /**
- * _islower - This is where the program is going to be doing
+ * _puts - This is where the program is going to be doing
  * @str: character to test
  * Return: This section will always be 0 succes
  */
